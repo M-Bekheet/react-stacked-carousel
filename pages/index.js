@@ -3,9 +3,7 @@ import { useState } from 'react';
 import Carousel from './Carousel';
 
 export default function Home() {
-  const [loop, setLoop] = useState(false);
-  const [withIndicators, setWithIndicators] = useState(true);
-
+  const [loop, setLoop] = useState(true);
   return (
     <div className="container">
       <Head>
@@ -13,13 +11,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <button onClick={(e) => setWithIndicators((prev) => !prev)}>
-        Toggle Indicators
-      </button>
-      <button onClick={(e) => setLoop((prev) => !prev)}>Toggle Loop</button>
-
+      <button onClick={(e) => setLoop((prev) => !prev)}>Loop Toggle</button>
       <main style={{ minHeight: `calc(100vh - 120px)` }}>
-        <Carousel loop={loop} withIndicators={withIndicators} />
+        <Carousel loop={loop} withIndicators duration={3000} />
       </main>
 
       <footer style={{ textAlign: 'center' }}>
