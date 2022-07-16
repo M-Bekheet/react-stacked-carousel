@@ -1,1 +1,3 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+# react-stacked-carousel
+
+Vertical stacked cards carousel in React
